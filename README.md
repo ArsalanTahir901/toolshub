@@ -27,7 +27,7 @@
 
 | Homepage | Tools Page | Blog Page |
 |----------|------------|-----------|
-| ![Homepage](public/screenshots/homepage.png) | ![Tools](public/screenshots/tools.png) | ![Blog](public/screenshots/blog.png) |
+| ![Homepage](public/screenshots/homepage.png) | ![Tools](public/screenshots/tools.png) | ![Blog](public/screenshots/blogs.png) |
 
 </div>
 
