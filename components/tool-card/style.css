@@ -1,0 +1,151 @@
+.tool-card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition), height var(--transition);
+}
+
+.tool-card:hover {
+    border-color: var(--bg-accent-glow-2);
+    box-shadow: var(--glow);
+    transform: translateY(-3px);
+}
+
+.tool-card h2 {
+    font-family: var(--font-head);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.tool-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.tool-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.icon-purple {
+    background: var(--purple);
+}
+
+.icon-teal {
+    background: var(--bg-teal-soft);
+}
+
+.icon-red {
+    background: var(--bg-red-soft);
+}
+
+.icon-yellow {
+    background: var(--bg-yellow-soft);
+}
+
+.icon-blue {
+    background: var(--bg-blue-soft);
+}
+
+.icon-green {
+    background: var(--bg-green-soft);
+}
+
+.icon-violet {
+    background: var(--bg-violet-soft);
+}
+
+.icon-amber {
+    background: var(--bg-amber-soft);
+}
+
+.tag {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+}
+
+/* .tag-hot {
+    background: var(--bg-red-soft);
+    color: var(--accent3);
+    border: 1px solid var(--border-red);
+}
+
+.tag-new {
+    background: var(--border-teal-soft);
+    color: var(--accent2);
+    border: 1px solid var(--border-teal);
+}
+
+.tag-popular {
+    background: var(--bg-yellow-soft);
+    color: var(--yellow);
+    border: 1px solid var(--border-yellow);
+} */
+
+.tool-workspace {
+    display: none;
+    margin-top: 16px;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+    animation: fadeIn 0.3s ease;
+    transition: all 0.3s ease-in-out;
+}
+
+.tool-workspace.active {
+    display: block;
+}
+
+.stats-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.stat-chip {
+    background: var(--bg-accent-medium);
+    border: 1px solid var(--bg-stat-chip);
+    border-radius: 999px;
+    padding: 4px 8px;
+    font-size: 11px;
+    color: var(--accent);
+}
+
+.btn-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}

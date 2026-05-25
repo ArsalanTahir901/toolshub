@@ -1,0 +1,22 @@
+.section-heading {
+    font-family: var(--font-head);
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1.15;
+    max-width: 780px;
+    margin: 0 auto 16px;
+}
+
+.section-heading span {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-intro .description {
+    color: var(--muted);
+    font-size: 17px;
+    max-width: 540px;
+    margin: 0 auto 36px;
+}

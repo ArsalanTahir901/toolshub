@@ -1,0 +1,19 @@
+.ad-banner {
+  position: relative;
+  z-index: 1;
+  margin: 40px 5% 40px;
+  padding: 18px;
+  border: 1px dashed var(--border-accent-soft);
+  border-radius: var(--radius);
+  background: var(--bg-accent-soft);
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+.ad-banner span {
+  display: block;
+  font-size: 10px;
+  margin-top: 4px;
+}

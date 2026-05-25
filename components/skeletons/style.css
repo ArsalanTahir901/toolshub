@@ -1,0 +1,23 @@
+.sk {
+    background: linear-gradient(90deg,
+            var(--bg-accent-medium) 25%,
+            var(--card) 50%,
+            var(--bg-accent-medium) 75%);
+    background-size: 600px 100%;
+    animation: shimmer 1.6s infinite;
+    border-radius: 6px;
+}
+
+.tool-card-skeleton .tag {
+    border-radius: 999px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -600px 0;
+    }
+
+    100% {
+        background-position: 600px 0;
+    }
+}

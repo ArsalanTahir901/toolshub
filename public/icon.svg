@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <!-- Deep navy box background -->
+    <linearGradient id="boxBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1a1535"/>
+      <stop offset="100%" stop-color="#0d0d1f"/>
+    </linearGradient>
+    <!-- Yellow glow behind bolt -->
+    <radialGradient id="boltGlow" cx="50%" cy="52%" r="40%">
+      <stop offset="0%"   stop-color="#f5c518" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f5c518" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Purple outer glow ring -->
+    <radialGradient id="purpleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#7c5cfc" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#7c5cfc" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Gold bolt gradient -->
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#ffe066"/>
+      <stop offset="100%" stop-color="#f5a623"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Box background -->
+  <rect width="512" height="512" rx="112.6" ry="112.6" fill="url(#boxBg)"/>
+
+  <!-- Purple ambient glow -->
+  <rect width="512" height="512" rx="112.6" ry="112.6" fill="url(#purpleGlow)"/>
+
+  <!-- Yellow glow behind bolt -->
+  <ellipse cx="256.0" cy="266.2" rx="194.6" ry="194.6" fill="url(#boltGlow)"/>
+
+  <!-- Lightning bolt -->
+  <polygon points="302.1,71.7 138.2,271.4 256.0,271.4 209.9,440.3 373.8,240.6 256.0,240.6" fill="url(#boltGrad)" opacity="0.97"/>
+</svg>

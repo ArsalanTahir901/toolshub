@@ -1,0 +1,74 @@
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.logo-ring {
+    position: relative;
+    padding: 1px;
+    border-radius: 14px;
+    background: conic-gradient(from var(--angle),
+            transparent 70%,
+            rgba(139, 92, 246, 0.8) 80%,
+            rgba(34, 211, 238, 0.8) 90%,
+            transparent 100%);
+    animation: spin-border 4s linear infinite;
+}
+
+.logo-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+    background: #0a0a0f;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-inner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%,
+            rgba(139, 92, 246, 0.25),
+            transparent 60%);
+}
+
+.logo-glyph {
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.9));
+}
+
+.wordmark {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 17px;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg,
+            #ffffff 0%,
+            #c4b5fd 50%,
+            #67e8f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.eyebrow {
+    font-size: 8px;
+    font-weight: 300;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    margin-top: 1px;
+}
+
+@keyframes spin-border {
+    to {
+        --angle: 360deg;
+    }
+}
