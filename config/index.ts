@@ -3,5 +3,5 @@ export const config = {
     mailto: 'mailto:hello@toolshub.com',
     lastUpdated: new Date().getFullYear(),
     twitter: 'https://twitter.com',
-    domainUrl: 'https://toolshub.com'
+    domainUrl: 'https://toolshub-lake.vercel.app/'
 }
