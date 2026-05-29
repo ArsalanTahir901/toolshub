@@ -9,7 +9,8 @@ export const schemaCategoryMap: Record<ToolCategoryEnum, string> = {
     [ToolCategoryEnum.SECURITY]: "SecurityApplication",
     [ToolCategoryEnum.IMAGE]: "MultimediaApplication",
     [ToolCategoryEnum.TEXT]: 'UtilitiesApplication',
-    [ToolCategoryEnum.UTILITY]: 'UtilitiesApplication'
+    [ToolCategoryEnum.UTILITY]: 'UtilitiesApplication',
+    [ToolCategoryEnum.ANALYZER]: 'UtilitiesApplication'
 };
 
 export const getSchemaCategory = (categories: ToolCategoryEnum[]) => {

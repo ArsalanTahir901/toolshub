@@ -9,7 +9,8 @@ export enum ToolCategoryEnum {
     GENERATOR = 'generator',
     UTILITY = 'utility',
     CALCULATOR = 'calculator',
-    IMAGE = 'image'
+    IMAGE = 'image',
+    ANALYZER = 'analyzer'
 }
 
 export enum ToolsConstantKeyEnums {
@@ -28,7 +29,10 @@ export enum ToolsConstantKeyEnums {
     PERCENTAGE_CALCULATOR = 'percentage-calculator',
     MARKDOWN_EDITOR = 'markdown-editor',
     DIFF_CHECKER = 'diff-checker',
-    META_TAG_GENERATOR = 'meta-tag-generator'
+    META_TAG_GENERATOR = 'meta-tag-generator',
+    CRON_PARSER = 'cron-parser',
+    URL_ENCODE_DECODE = 'url-encode-decode',
+    JWT_DECODE = 'jwt-decode'
 }
 
 export type ToolsObject = {

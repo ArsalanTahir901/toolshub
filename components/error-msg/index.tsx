@@ -1,4 +1,4 @@
-interface Props { error?: string }
+interface Props { error?: string | null | undefined }
 
 export const ErrorMsg = ({ error }: Props) => {
     if (!error) return null;

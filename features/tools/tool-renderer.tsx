@@ -24,6 +24,9 @@ const toolComponents: Record<ToolsConstantKeyEnums, ComponentType> = {
     [ToolsConstantKeyEnums.MARKDOWN_EDITOR]: dynamic(() => import("@/features/tools/markdown-html-converter").then((mod) => mod.default), { loading }),
     [ToolsConstantKeyEnums.DIFF_CHECKER]: dynamic(() => import("@/features/tools/diff-checker").then((mod) => mod.default), { loading }),
     [ToolsConstantKeyEnums.META_TAG_GENERATOR]: dynamic(() => import("@/features/tools/meta-tag-generator").then((mod) => mod.default), { loading }),
+    [ToolsConstantKeyEnums.CRON_PARSER]: dynamic(() => import('@/features/tools/cron-parser').then(mod => mod.default), { loading }),
+    [ToolsConstantKeyEnums.URL_ENCODE_DECODE]: dynamic(() => import('@/features/tools/url-encode-decode').then(mod => mod.default), { loading }),
+    [ToolsConstantKeyEnums.JWT_DECODE]: dynamic(() => import('@/features/tools/jwt-decode').then(mod => mod.default), { loading })
 };
 
 export const ToolRenderer = ({ slug }: { slug: ToolsConstantKeyEnums }) => {

@@ -772,4 +772,198 @@ export const toolsSeoContent = {
             }
         ],
     },
+    [ToolsConstantKeyEnums.CRON_PARSER]: {
+        intro: "Cron expressions are powerful, but remembering the syntax can be frustrating. A single misplaced value can change a schedule from running every hour to running once a month.\n\nOur free Cron Parser helps you instantly validate cron expressions, understand what they mean in plain English, inspect each field, and preview upcoming execution times.\n\nWhether you're configuring Linux cron jobs, CI/CD pipelines, Kubernetes CronJobs, GitHub Actions schedules, cloud automation, or application task schedulers, this tool makes cron expressions easier to read, verify, and debug.",
+
+        whatIsIt: "A cron parser is a tool that reads a cron expression and converts it into a human-readable schedule.\n\nInstead of manually interpreting values like '*/5 * * * *' or '0 9 * * 1-5', a cron parser explains exactly when the task will run, validates the syntax, highlights invalid fields, and calculates future execution times.\n\nDevelopers, DevOps engineers, system administrators, and cloud engineers use cron parsers to avoid scheduling mistakes, troubleshoot automation issues, and verify recurring jobs before deploying them to production environments.",
+
+        howToUse: [
+            "Enter a cron expression in the input field using the standard five-field format: minute, hour, day of month, month, and day of week",
+            "Watch the parser validate each field in real time and highlight any invalid values, ranges, lists, or step intervals",
+            "Read the generated human-readable description to confirm the schedule matches your intention",
+            "Review the field breakdown table to understand exactly what each cron segment represents",
+            "Check the upcoming execution times section to see when the job will run next",
+            "Use one of the built-in presets such as Every Minute, Daily at Midnight, Weekdays at 9 AM, or Monthly schedules to get started quickly",
+            "Copy the validated cron expression and use it in Linux crontab files, Kubernetes CronJobs, GitHub Actions, cloud schedulers, or application task runners"
+        ],
+
+        benefits: [
+            "Instantly validate cron expressions and catch syntax errors before deploying scheduled jobs",
+            "Convert complex cron schedules into clear, human-readable descriptions that are easier to understand and review",
+            "Preview upcoming execution times to verify exactly when tasks will run",
+            "Break down each cron field individually to simplify learning and debugging",
+            "Reduce production mistakes caused by incorrect schedules, invalid ranges, or misunderstood cron syntax",
+            "Works with common cron patterns including wildcards, ranges, lists, and step values",
+            "Runs entirely in your browser with no server processing, ensuring privacy and fast performance"
+        ],
+
+        faq: [
+            {
+                question: "What is a cron expression?",
+                answer: "A cron expression is a scheduling format used to define recurring tasks. It consists of five fields representing minute, hour, day of month, month, and day of week. For example, '0 9 * * 1-5' means a task runs at 9:00 AM every weekday."
+            },
+            {
+                question: "What do the five cron fields mean?",
+                answer: "The fields are ordered as Minute, Hour, Day of Month, Month, and Day of Week. For example, in '30 14 * * 1', the task runs at 2:30 PM every Monday. Each field controls a different part of the schedule."
+            },
+            {
+                question: "What does the asterisk (*) mean in cron?",
+                answer: "The asterisk is a wildcard that means 'every possible value' for that field. For example, '* * * * *' runs every minute, while '0 * * * *' runs at the start of every hour."
+            },
+            {
+                question: "What does */5 or */15 mean?",
+                answer: "Step values specify intervals. '*/5' means every 5 units of the field, while '*/15' means every 15 units. In the minute field, '*/15 * * * *' runs every 15 minutes."
+            },
+            {
+                question: "How do ranges and lists work?",
+                answer: "Ranges use a hyphen to define a span of values, such as '1-5' for Monday through Friday. Lists use commas to specify multiple values, such as '1,3,5' for Monday, Wednesday, and Friday."
+            },
+            {
+                question: "Can I use this tool for Linux cron jobs?",
+                answer: "Yes. The parser supports standard five-field cron expressions commonly used in Linux crontab files, servers, containers, CI/CD pipelines, and cloud schedulers."
+            },
+            {
+                question: "Why are next execution times useful?",
+                answer: "Human-readable descriptions help explain a schedule, but upcoming execution times provide confirmation. They allow you to verify exactly when a job will run before deploying it to production."
+            },
+            {
+                question: "What happens if my cron expression is invalid?",
+                answer: "The parser validates each field individually and displays clear error messages for invalid values, ranges, steps, or syntax. This makes it easier to identify and fix mistakes quickly."
+            },
+            {
+                question: "Does this tool support advanced cron syntax?",
+                answer: "The parser focuses on standard five-field cron expressions and common scheduling patterns such as wildcards, ranges, lists, and step values. Support for advanced platform-specific syntax depends on the scheduler being used."
+            },
+            {
+                question: "Is my cron expression stored anywhere?",
+                answer: "No. All parsing, validation, and schedule calculations happen locally in your browser. Nothing is transmitted to a server, stored in a database, or shared with third parties."
+            }
+        ],
+    },
+    [ToolsConstantKeyEnums.URL_ENCODE_DECODE]: {
+        intro:
+            "URLs cannot safely contain spaces, symbols, or certain special characters, which is why URL encoding is essential for web development.\n\nOur free URL Encoder / Decoder helps you instantly convert text into URL-safe format and decode encoded URLs back into readable form. It's useful for APIs, query strings, redirects, and web requests where data must be safely transmitted over the internet.",
+
+        whatIsIt:
+            "A URL Encoder / Decoder is a tool that converts text into a URL-safe format and vice versa.\n\nURL encoding replaces unsafe characters like spaces, &, ?, =, and / with percent-encoded values (for example, space becomes %20).\n\nURL decoding reverses this process, turning encoded strings back into readable text.\n\nDevelopers use it when working with query parameters, API requests, web forms, redirects, and any system where data is passed through URLs.",
+
+        howToUse: [
+            "Enter the text or URL you want to encode or decode in the input field",
+            "Click on Encode to convert normal text into URL-safe format",
+            "Click on Decode to convert encoded URLs back into readable text",
+            "Copy the result with a single click for use in your code or browser",
+            "Use encoded URLs in API requests, query strings, and redirects safely",
+            "Switch between encode and decode modes instantly without reloading the tool"
+        ],
+
+        benefits: [
+            "Safely convert URLs and text into a format that can be transmitted over the internet",
+            "Avoid broken URLs caused by spaces or special characters",
+            "Easily debug encoded query parameters in API requests",
+            "Quickly decode complex URLs into readable format for troubleshooting",
+            "Useful for developers working with REST APIs, web forms, and routing",
+            "Works instantly in the browser with no server processing required"
+        ],
+
+        faq: [
+            {
+                question: "What is URL encoding?",
+                answer:
+                    "URL encoding is the process of converting special characters into a percent-encoded format so they can be safely used in URLs. For example, a space becomes %20."
+            },
+            {
+                question: "Why do we need URL encoding?",
+                answer:
+                    "URLs can only contain a limited set of characters. Encoding ensures that special characters like spaces, &, ?, and = do not break the URL structure."
+            },
+            {
+                question: "What is URL decoding?",
+                answer:
+                    "URL decoding is the reverse process of encoding. It converts percent-encoded characters back into their original readable form."
+            },
+            {
+                question: "What is the difference between encodeURI and encodeURIComponent?",
+                answer:
+                    "encodeURI is used for full URLs and preserves URL structure characters, while encodeURIComponent encodes almost all special characters and is used for query parameters."
+            },
+            {
+                question: "Where is URL encoding used?",
+                answer:
+                    "It is used in query strings, API requests, form submissions, redirects, and anywhere data is passed through a URL."
+            },
+            {
+                question: "Can URL decoding fail?",
+                answer:
+                    "Yes, decoding can fail if the input contains invalid percent-encoding. In such cases, the tool will show an error or return invalid input message."
+            },
+            {
+                question: "Is my data stored in this tool?",
+                answer:
+                    "No. All encoding and decoding happens directly in your browser. Nothing is sent to a server or stored anywhere."
+            }
+        ]
+    },
+    [ToolsConstantKeyEnums.JWT_DECODE]: {
+        intro:
+            "JWT (JSON Web Token) is widely used for authentication and secure data exchange in modern web applications.\n\nOur free JWT Decoder & Security Analyzer helps you instantly decode tokens into readable format, inspect header, payload, and signature, and analyze security risks like expired tokens, missing claims, and tampering attempts.",
+
+        whatIsIt:
+            "A JWT Decoder is a tool that breaks down a JSON Web Token into its three core parts: Header, Payload, and Signature.\n\nIt converts Base64URL-encoded data into human-readable JSON so developers can inspect authentication data such as user ID, roles, expiration time, and issuer.\n\nAdvanced JWT tools also analyze security risks and validate token integrity.",
+
+        howToUse: [
+            "Paste your JWT token into the input field",
+            "The tool automatically decodes header and payload",
+            "View token details like issuer, subject, and expiration",
+            "Check security analysis for risks like missing exp or alg:none",
+            "Use the tabs to explore decoded data, claims, and time info",
+            "Copy or export the decoded result for debugging or development use",
+        ],
+
+        benefits: [
+            "Instantly decode JWT tokens without backend tools",
+            "Debug authentication issues in APIs and frontend apps",
+            "Inspect user roles, permissions, and claims easily",
+            "Detect security risks like expired tokens or missing signatures",
+            "Validate OAuth and authentication flows during development",
+            "Improve security awareness by analyzing token structure",
+        ],
+
+        faq: [
+            {
+                question: "What is a JWT token?",
+                answer:
+                    "A JWT (JSON Web Token) is a compact token used for securely transmitting information between two parties. It contains a header, payload, and signature."
+            },
+            {
+                question: "Is JWT decoding safe?",
+                answer:
+                    "Yes. Decoding a JWT is safe because it only converts encoded data into readable format. It does not require the secret key and does not modify the token."
+            },
+            {
+                question: "Can I see the password in a JWT token?",
+                answer:
+                    "No. JWT tokens should never contain passwords. They usually contain user ID, roles, and metadata, but not sensitive secrets."
+            },
+            {
+                question: "What happens if a JWT is expired?",
+                answer:
+                    "If a JWT is expired, the server will reject it during authentication. The decoder will also show it as expired based on the 'exp' claim."
+            },
+            {
+                question: "Can JWT tokens be modified?",
+                answer:
+                    "Yes, but modifying a JWT without the correct signature will make it invalid. The server will reject tampered tokens."
+            },
+            {
+                question: "What is alg:none vulnerability?",
+                answer:
+                    "It is a security issue where a JWT is unsigned or incorrectly configured, allowing attackers to bypass signature verification."
+            },
+            {
+                question: "Is my JWT data stored anywhere?",
+                answer:
+                    "No. All decoding happens locally in your browser. Your token is never sent to a server or stored."
+            }
+        ]
+    }
 } satisfies Record<ToolsConstantKeyEnums, SeoContentType>;

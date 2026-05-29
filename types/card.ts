@@ -34,7 +34,7 @@ interface ToolCardProps {
     tag?: ToolCardContent
     heading?: string
     title?: string
-    description?: string
+    description?: ReactNode
     children?: ReactNode
     stats?: string[]
     textarea?: React.ComponentProps<'textarea'>

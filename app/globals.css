@@ -132,6 +132,7 @@ body::before {
 
 textarea,
 input[type="text"],
+input[type="password"],
 input[type='email'],
 input[type="number"],
 input[type="url"],
@@ -184,6 +185,7 @@ select,
 input[type="datetime-local"],
 input[type="datetime"],
 input[type="time"],
+input[type="password"],
 option {
   cursor: pointer;
 }

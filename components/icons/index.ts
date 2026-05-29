@@ -71,6 +71,7 @@ export const icons = {
     low: '🟢',
     medium: '🔵',
     quarter: '🟠',
+    wraningLevel: '🟡',
     high: '🔴',
     lcd: '🖥️',
     receipt: '🧾',
@@ -88,5 +89,14 @@ export const icons = {
     question: '❓',
     tag: '🏷️',
     cross: '✕',
-    info: 'ℹ'
+    info: 'ℹ',
+    alarmClock: '⏰',
+    shield: '🛡️',
+    crossRed: '❌',
+    blocked: '⛔',
+    monkey_blind: '🙈',
+    eye: '👁️',
+    play: '▶',
+    compare: '⟷',
+    code: '⟨/⟩'
 }

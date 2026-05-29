@@ -625,6 +625,178 @@ export const toolsBlogArticles: Record<ToolsConstantKeyEnums, BlogArticleType> =
                 "Meta tags are the foundation of how search engines and social platforms understand your content. A well-configured title and description improve click-through from search. Open Graph controls how your links look when shared. JSON-LD structured data unlocks rich results. A meta tag generator handles all of this in one form , with live SERP previews, social card previews, validation warnings, and platform-specific exports. Fill in your details, fix any warnings, copy the output, and ship.",
         },
     },
+    [ToolsConstantKeyEnums.CRON_PARSER]: {
+        slug: "cron-parser-guide",
+        title: "Cron Parser Guide: Understand, Validate, and Debug Cron Expressions",
+        metaDescription:
+            "Learn how cron expressions work, what each field means, how to use wildcards, ranges, lists, and step values, and how to validate schedules before deploying automation jobs.",
+        publishedAt: "2024-09-15",
+        readingTimeMinutes: 8,
+        tags: ["cron parser", "cron expression", "cron jobs", "linux", "devops", "automation"],
+        content: {
+            introduction:
+                "Cron expressions are one of the most common ways to schedule recurring tasks, but they can also be one of the most confusing. A small mistake in a cron expression can cause a backup to run every minute instead of once a day, or prevent an important job from running at all. A Cron Parser helps by validating expressions, translating them into plain English, and showing upcoming execution times so you can verify schedules before deploying them.",
+
+            sections: [
+                {
+                    heading: "What Is a Cron Expression?",
+                    body: "A cron expression is a scheduling format used by operating systems, cloud platforms, CI/CD pipelines, and application schedulers to define recurring jobs.\n\nA standard cron expression contains five fields:\n\n```text\n* * * * *\n│ │ │ │ │\n│ │ │ │ └── Day of Week (0-7)\n│ │ │ └──── Month (1-12)\n│ │ └────── Day of Month (1-31)\n│ └──────── Hour (0-23)\n└────────── Minute (0-59)\n```\n\nEach field controls when a task should run. Together they define a complete schedule that can repeat every minute, every day, every month, or almost any interval you need.",
+                },
+                {
+                    heading: "Understanding the Five Cron Fields",
+                    body: "Every cron expression is built from five individual fields:\n\n- **Minute**: 0–59\n- **Hour**: 0–23\n- **Day of Month**: 1–31\n- **Month**: 1–12\n- **Day of Week**: 0–7 (Sunday is usually 0 or 7)\n\nExample:\n\n```text\n30 14 * * 1\n```\n\nThis means:\n\n- Minute: 30\n- Hour: 14 (2 PM)\n- Any day of month\n- Any month\n- Monday\n\nResult: The job runs every Monday at 2:30 PM.",
+                },
+                {
+                    heading: "Wildcards, Lists, Ranges, and Step Values",
+                    body: "Cron expressions support several special patterns that make scheduling flexible.\n\n**Wildcard (*)**\n\n```text\n* * * * *\n```\n\nMeans every possible value.\n\n**List (,)**\n\n```text\n0 9 * * 1,3,5\n```\n\nRuns at 9:00 AM on Monday, Wednesday, and Friday.\n\n**Range (-)**\n\n```text\n0 9 * * 1-5\n```\n\nRuns at 9:00 AM Monday through Friday.\n\n**Step (*/)**\n\n```text\n*/15 * * * *\n```\n\nRuns every 15 minutes.\n\nThese patterns can be combined to create highly specific schedules while keeping expressions concise.",
+                },
+                {
+                    heading: "Common Cron Examples",
+                    body: "Some schedules appear repeatedly across development and operations workflows.\n\nEvery minute:\n\n```text\n* * * * *\n```\n\nEvery hour:\n\n```text\n0 * * * *\n```\n\nEvery day at midnight:\n\n```text\n0 0 * * *\n```\n\nEvery weekday at 9 AM:\n\n```text\n0 9 * * 1-5\n```\n\nFirst day of every month:\n\n```text\n0 0 1 * *\n```\n\nEvery Sunday:\n\n```text\n0 0 * * 0\n```\n\nUnderstanding these patterns makes it easier to read and create more advanced schedules.",
+                },
+                {
+                    heading: "Why Cron Validation Matters",
+                    body: "Cron syntax is easy to mistype. Invalid ranges, incorrect step values, and misplaced fields can create unexpected schedules.\n\nFor example:\n\n```text\n1-5-7 * * * *\n```\n\nLooks similar to a valid range but contains invalid syntax.\n\nLikewise:\n\n```text\n*/0 * * * *\n```\n\nUses an invalid step value and should never be accepted.\n\nA cron parser validates each field individually, highlights errors, and prevents invalid schedules from reaching production systems.",
+                },
+                {
+                    heading: "Previewing Upcoming Execution Times",
+                    body: "Reading a cron expression is useful, but seeing future execution times is even better.\n\nFor example:\n\n```text\n0 9 * * 1-5\n```\n\nMay be interpreted as 'Weekdays at 9:00 AM,' but showing the next several execution dates confirms that the schedule behaves exactly as expected.\n\nExecution previews help catch mistakes before deployment and are particularly useful when working with monthly schedules, complex ranges, or maintenance windows.",
+                },
+                {
+                    heading: "Where Cron Expressions Are Used",
+                    body: "Cron expressions are used throughout modern software infrastructure.\n\nCommon use cases include:\n\n- Linux and Unix cron jobs\n- Kubernetes CronJobs\n- CI/CD pipelines\n- Scheduled database backups\n- Log cleanup tasks\n- Report generation systems\n- Cloud schedulers and serverless functions\n- Automated notifications and reminders\n\nBecause cron is widely supported, learning the syntax is a valuable skill for developers, DevOps engineers, and system administrators.",
+                },
+                {
+                    heading: "Using a Cron Parser to Avoid Production Mistakes",
+                    body: "Before deploying any scheduled job, it's worth validating the expression and reviewing future run times.\n\nA cron parser helps by:\n\n- Explaining schedules in plain English\n- Validating syntax and field values\n- Detecting invalid ranges and step values\n- Showing upcoming execution dates\n- Making complex schedules easier to understand\n\nThis extra validation step can prevent failed backups, missed reports, duplicated jobs, and other costly scheduling errors.",
+                },
+            ],
+
+            conclusion:
+                "Cron expressions power automation across servers, cloud platforms, containers, and applications. While the syntax is compact, it can be difficult to interpret and easy to get wrong. A Cron Parser simplifies the process by validating expressions, translating schedules into human-readable language, and displaying upcoming execution times. Whether you're configuring a Linux cron job, Kubernetes CronJob, or CI/CD schedule, validating your cron expression before deployment is one of the simplest ways to prevent automation mistakes.",
+        },
+    },
+    [ToolsConstantKeyEnums.URL_ENCODE_DECODE]: {
+        slug: "url-encoder-decoder-guide",
+        title: "URL Encoder / Decoder: The Complete Guide to Safe URLs and Web Encoding",
+        metaDescription:
+            "Learn what URL encoding is, why special characters break URLs, how encoding and decoding work, and how developers safely pass data in URLs, APIs, and web requests.",
+        publishedAt: "2024-09-10",
+        readingTimeMinutes: 6,
+        tags: ["URL encoding", "URL decoding", "web development", "APIs", "query params", "SEO URLs"],
+
+        content: {
+            introduction:
+                "URLs are the backbone of the web, but they have strict rules about what characters are allowed. Spaces, symbols, and special characters can break links or change their meaning. URL encoding solves this problem by converting unsafe characters into a format that browsers and servers can safely understand.\n\nA URL Encoder / Decoder tool helps developers instantly convert text into URL-safe format and decode it back into readable form, making it essential for APIs, query strings, redirects, and web applications.",
+
+            sections: [
+                {
+                    heading: "What Is URL Encoding and Why Do We Need It?",
+                    body:
+                        "URL encoding is a mechanism that replaces unsafe or reserved characters in a URL with a percent-encoded format.\n\nFor example:\n- Space → %20\n- & → %26\n- ? → %3F\n\nURLs are only designed to support a limited set of characters. If you try to send raw text like 'hello world & test', it can break the URL structure or be misinterpreted by the server.\n\nEncoding ensures that data can safely travel through browsers, APIs, and servers without corruption or misrouting."
+                },
+                {
+                    heading: "How URL Decoding Works",
+                    body:
+                        "URL decoding is the reverse process of encoding. It converts percent-encoded values back into readable text.\n\nFor example:\n- hello%20world → hello world\n- name%3Dali → name=ali\n\nDecoding is especially useful when debugging APIs or inspecting query parameters, because it allows you to see the original values passed through the URL."
+                },
+                {
+                    heading: "When Should You Use URL Encoding?",
+                    body:
+                        "URL encoding is required in many real-world scenarios:\n\n- Sending data in query strings (?q=search term)\n- Making API requests with dynamic parameters\n- Submitting web forms via GET requests\n- Building redirect URLs\n- Passing user-generated input safely through URLs\n\nAny time data leaves your frontend and enters a URL, encoding is usually required."
+                },
+                {
+                    heading: "encodeURI vs encodeURIComponent",
+                    body:
+                        "JavaScript provides two built-in functions for encoding URLs, and they behave differently:\n\n- encodeURI(): Used for full URLs. It preserves URL structure like : / ? &\n- encodeURIComponent(): Used for individual components like query parameters. It encodes almost everything unsafe.\n\nExample:\n- encodeURIComponent('a b&c') → a%20b%26c\n\nIn most real-world cases (especially query params), encodeURIComponent is the safer choice."
+                },
+                {
+                    heading: "Common Problems URL Encoding Solves",
+                    body:
+                        "Without encoding, URLs can break in subtle and dangerous ways:\n\n- Spaces get interpreted as separators\n- Special characters like & split query parameters incorrectly\n- Non-ASCII characters may be lost or corrupted\n- APIs may reject malformed requests\n\nEncoding ensures consistency across browsers, servers, and APIs."
+                }
+            ],
+
+            conclusion:
+                "URL encoding and decoding are simple but critical concepts in web development. They ensure that data passed through URLs remains safe, structured, and uncorrupted. A URL Encoder / Decoder tool removes the need to manually handle encoding rules, letting you focus on building features instead of debugging broken URLs."
+        }
+    },
+    [ToolsConstantKeyEnums.JWT_DECODE]: {
+        slug: "jwt-decoder-security-analyzer-guide",
+        title: "JWT Decoder & Security Analyzer: Decode Tokens, Validate Claims, and Detect Security Risks Instantly",
+        metaDescription:
+            "Decode JWT tokens instantly and analyze header, payload, signature, expiration, and claims. Detect security risks like tampering, missing expiration, alg:none, and privileged access tokens without any backend setup.",
+        publishedAt: "2025-01-15",
+        readingTimeMinutes: 10,
+        tags: [
+            "JWT",
+            "authentication",
+            "security",
+            "token decoding",
+            "OAuth",
+            "web security",
+            "Next.js",
+            "developer tools",
+        ],
+
+        content: {
+            introduction:
+                "JWT (JSON Web Token) is one of the most widely used authentication formats in modern web applications, powering everything from login sessions to API authorization. A JWT decoder lets you instantly inspect the internal structure of a token , its header, payload, and signature , without requiring backend access or debugging tools. A modern JWT decoder goes beyond simple decoding and acts as a full security analyzer, highlighting risks, expired sessions, missing claims, and potential token manipulation attempts.",
+
+            sections: [
+                {
+                    heading: "What Is a JWT and How It Works",
+                    body:
+                        "A JSON Web Token (JWT) is a compact, URL-safe string used to securely transmit information between two parties. It is composed of three parts:\n\n- **Header** , defines the signing algorithm (e.g., HS256, RS256)\n- **Payload** , contains claims such as user ID, roles, expiration time\n- **Signature** , ensures the token has not been tampered with\n\nA typical JWT looks like this:\n\n`xxxxx.yyyyy.zzzzz`\n\nEach part is Base64URL encoded. A JWT decoder simply decodes these segments and converts them into readable JSON format.",
+                },
+
+                {
+                    heading: "Why Developers Use JWT Decoders",
+                    body:
+                        "JWT tokens are not meant to be human-readable, which makes debugging and security inspection difficult without proper tools. Developers use JWT decoders to:\n\n- Debug authentication issues in APIs\n- Verify token expiration and validity\n- Inspect user roles and permissions\n- Detect incorrect or missing claims\n- Validate integration with OAuth or third-party services\n\nWithout a decoder, identifying why a token is failing often requires backend logs or manual inspection.",
+                },
+
+                {
+                    heading: "JWT Structure Breakdown",
+                    body:
+                        "Each JWT contains three base64-encoded segments:\n\n**Header:**\nContains metadata about the token such as algorithm and type.\n\n**Payload:**\nContains claims such as:\n- `sub` (subject / user ID)\n- `iss` (issuer)\n- `aud` (audience)\n- `exp` (expiration time)\n- `iat` (issued at)\n\n**Signature:**\nEnsures integrity using HMAC or RSA-based cryptographic signing.\n\nA JWT decoder separates and decodes each section safely without requiring the secret key (unless verification is enabled).",
+                },
+
+                {
+                    heading: "Security Risks a JWT Analyzer Detects",
+                    body:
+                        "A modern JWT decoder is not just a viewer , it is a security scanner. It can detect multiple risks:\n\n- **Missing expiration (`exp`)** , token may never expire\n- **alg:none vulnerability** , token is unsigned and unsafe\n- **Sensitive data exposure** , passwords or secrets inside payload\n- **Overprivileged claims** , roles like admin or root embedded directly\n- **Future-issued tokens (`iat > now`)** , invalid time configuration\n- **Nested JWTs** , tokens inside tokens (chain abuse)\n\nThese checks help developers identify insecure authentication implementations before deployment.",
+                },
+
+                {
+                    heading: "JWT Expiration and Time Validation",
+                    body:
+                        "JWT tokens rely heavily on time-based validation claims:\n\n- `exp` , expiration time\n- `iat` , issued at time\n- `nbf` , not before time\n\nA secure system always enforces expiration checks. If a token lacks `exp`, it may remain valid indefinitely, creating a major security risk. A JWT analyzer highlights remaining time, expiry status, and whether a token is already active or not yet valid.",
+                },
+
+                {
+                    heading: "Signature Verification (Advanced Mode)",
+                    body:
+                        "JWT signature verification ensures that the token was issued by a trusted source and has not been modified. Depending on the algorithm:\n\n- **HS256** , uses a shared secret key (HMAC)\n- **RS256** , uses public/private key pairs\n\nWithout verification, decoding only shows data but cannot confirm authenticity. A full JWT tool can optionally verify signatures using a secret or public key to ensure trust.",
+                },
+
+                {
+                    heading: "Common Mistakes Developers Make with JWT",
+                    body:
+                        "JWT misuse is one of the most common authentication security issues in web applications:\n\n- Storing sensitive data inside payload\n- Not validating expiration properly\n- Using weak or missing signatures\n- Allowing long-lived tokens without refresh strategy\n- Not validating issuer or audience claims\n\nA JWT decoder helps catch these mistakes early during development.",
+                },
+
+                {
+                    heading: "When to Use a JWT Decoder Tool",
+                    body:
+                        "You should use a JWT decoder during:\n\n- API authentication debugging\n- OAuth integration testing\n- Security audits\n- Frontend/backend token inspection\n- Learning how JWT works internally\n\nIt eliminates guesswork and gives immediate visibility into authentication flow.",
+                },
+            ],
+
+            conclusion:
+                "A JWT decoder is an essential tool for modern developers working with authentication systems. It provides instant visibility into token structure, helps debug authentication issues, and detects critical security risks that could otherwise go unnoticed. Combined with security analysis and signature verification, it becomes a powerful inspection tool for both development and production environments.",
+        },
+    }
 };
 
 export const blogRegistry = toolsBlogArticles;

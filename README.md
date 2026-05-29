@@ -91,7 +91,7 @@ All posts are statically generated for maximum performance.
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/toolshub.git
+git clone https://github.com/ArsalanTahir901/toolshub.git
 cd toolshub
 
 # 2. Install dependencies
@@ -120,7 +120,7 @@ This project is deployed on **Vercel** with automatic CI/CD:
 2. Vercel auto-builds and deploys
 3. Live in seconds ⚡
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/toolshub)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ArsalanTahir901/toolshub)
 
 ---
 
@@ -169,7 +169,7 @@ Please make sure your code follows the existing style and all tools are responsi
 
 *Focused on building fast, SEO-friendly, free web tools.*
 
-[![GitHub](https://img.shields.io/badge/GitHub-@arsalan-181717?style=flat-square&logo=github)](https://github.com/your-username)
+[![GitHub](https://img.shields.io/badge/GitHub-@arsalan-181717?style=flat-square&logo=github)](https://github.com/ArsalanTahir901)
 
 </div>
 

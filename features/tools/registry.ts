@@ -165,6 +165,41 @@ export const toolsRegistry: Record<ToolsConstantKeyEnums, ToolsObject> = {
         tag: { text: "seo", variant: "success" },
         description: "Generate SEO meta tags (title, description, Open Graph, Twitter Cards) for any page.",
     },
+    [ToolsConstantKeyEnums.CRON_PARSER]: {
+        seoCategory: [ToolCategoryEnum.DEVELOPER],
+        id: 'cronParser',
+        title: 'Cron Expression Parser',
+        icon: { text: icons.alarmClock, className: 'icon-amber' },
+        tag: { text: `${icons.zap} Dev Tool`, variant: 'info' },
+        href: `${prefix}${ToolsConstantKeyEnums.CRON_PARSER}`,
+        slug: ToolsConstantKeyEnums.CRON_PARSER,
+        description: "Parse and validate cron expressions. See a human-readable description, next 8 scheduled run times, and use common presets instantly."
+    },
+    [ToolsConstantKeyEnums.URL_ENCODE_DECODE]: {
+        seoCategory: [ToolCategoryEnum.DEVELOPER, ToolCategoryEnum.UTILITY, ToolCategoryEnum.CONVERTER],
+        id: 'urlEncodeDecode',
+        title: 'URL Encoder / Decoder',
+        icon: { text: icons.link, className: 'icon-blue' },
+        tag: { text: `${icons.zap} Dev Tool`, variant: 'info' },
+        href: `${prefix}${ToolsConstantKeyEnums.URL_ENCODE_DECODE}`,
+        slug: ToolsConstantKeyEnums.URL_ENCODE_DECODE,
+        description: "Encode and decode URLs instantly. Convert special characters into URL-safe format and decode encoded URLs back to readable text."
+    },
+    [ToolsConstantKeyEnums.JWT_DECODE]: {
+        seoCategory: [
+            ToolCategoryEnum.DEVELOPER,
+            ToolCategoryEnum.SECURITY,
+            ToolCategoryEnum.UTILITY,
+            ToolCategoryEnum.ANALYZER,
+        ],
+        id: "jwtDecoder",
+        title: "JWT Decoder & Security Analyzer",
+        icon: { text: icons.shield, className: "icon-purple", },
+        tag: { text: `${icons.lock} Security Tool`, variant: "danger", },
+        href: `${prefix}${ToolsConstantKeyEnums.JWT_DECODE}`,
+        slug: ToolsConstantKeyEnums.JWT_DECODE,
+        description: "Free online JWT Decoder and Security Analyzer. Decode JWT tokens, inspect header & payload, verify signature, check expiration, validate claims, and detect security risks like alg:none, tampering, and sensitive data exposure.",
+    }
 };
 
 export const toolsConstant = toolsRegistry;
